@@ -20,14 +20,14 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   # username: <%= ENV['DB_USERNAME'] %>
   # password: <%= ENV['DB_PASSWORD'] %>
-  username: codeboxx
-  password: "Codeboxx1!"
-  host: codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com
+  username: root
+  password: "root"
+  host: 127.0.0.1
   # socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
-  database: Tanim_Khondaker_development
+  database: rocketdb
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -57,4 +57,4 @@ development:
 #
 production:
   <<: *default
-  database: Tanim_Khondaker
+  database: rocketdb
