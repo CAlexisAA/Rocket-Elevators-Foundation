@@ -156,8 +156,8 @@ ActiveRecord::Schema.define(version: 2022_07_25_023045) do
     t.string "result", null: false
     t.string "report"
     t.string "status", null: false
+    t.bigint "author_id"
     t.bigint "employee_id"
-    t.bigint "author"
     t.bigint "customer_id"
     t.bigint "building_id"
     t.bigint "batterie_id"
@@ -166,6 +166,7 @@ ActiveRecord::Schema.define(version: 2022_07_25_023045) do
     t.index ["batterie_id"], name: "index_interventions_on_batterie_id"
     t.index ["building_id"], name: "index_interventions_on_building_id"
     t.index ["column_id"], name: "index_interventions_on_column_id"
+    t.index ["customer_id"], name: "index_interventions_on_customer_id"
     t.index ["elevator_id"], name: "index_interventions_on_elevator_id"
     t.index ["employee_id"], name: "index_interventions_on_employee_id"
   end

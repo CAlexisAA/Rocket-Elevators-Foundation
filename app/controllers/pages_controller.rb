@@ -9,6 +9,8 @@ class PagesController < ApplicationController
   end
   def quote
   end
-  # def admin
-  # end
+  def admin
+  end
+  def intervention
+  end
 end

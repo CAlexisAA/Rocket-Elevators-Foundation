@@ -6,6 +6,7 @@ class CreateInterventions < ActiveRecord::Migration[5.2]
       a.string :result, null: false
       a.string :report
       a.string :status, null: false
+      a.bigint :author_id
       a.belongs_to :employee
       a.belongs_to :customer
       a.belongs_to :building
@@ -13,6 +14,7 @@ class CreateInterventions < ActiveRecord::Migration[5.2]
       a.belongs_to :column
       a.belongs_to :elevator
     end
+
   end
 end
 

@@ -190,17 +190,18 @@ batterieOBJ = Batterie.create!(
     )
     puts "hiaqs"
     Intervention.create!(
-       
+        author_id: 1,
         employee_id: 1,
+        customer_id: customerOBJ.id,
         building_id: buildingOBJ.id,
         batterie_id: batterieOBJ.id,
         column_id: columnOBJ.id,
         elevator_id: elevatorOBJ.id,
         interventionDateStart: Faker::Date.between(from: '2022-01-01', to: '2022-3-1'),
         interventionDateEnd: Faker::Date.between(from: '2022-4-01', to: '2022-6-1'),
-        result: ['success', 'failed'].sample,
+        result: ['Incomplete'],
         report: Faker::Lorem.sentence,
-        status: ['Active', 'Inactive'].sample
+        status: ['Pending']
     )
 end
 
