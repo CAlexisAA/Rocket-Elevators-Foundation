@@ -7,8 +7,8 @@ set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rben
 set :rbenv_map_bins, %w{rake gem bundle ruby rails puma pumactl}
 set :rbenv_roles, :all # default value
 
-set :application, "Tanim_Khondaker"
-set :repo_url, "https://github.com/Spire0859/Rocket_Elevators_API"
+set :application, "Carlos_Alexis"
+set :repo_url, "https://github.com/CAlexisAA/Rocket-Elevators-Foundation"
 
 
 before "deploy:assets:precompile", "deploy:yarn_install"
