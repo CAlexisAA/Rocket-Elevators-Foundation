@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :leads
   resources :customers
-  resources :interventions
+  resources :interventions, only: [:new, :create]
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'pages#home'
   resources :quotes
@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   # get 'admin', to: 'pages#admin'
   post '/contacts', to: 'home#create'
   devise_for :users
+  get 'interventions/customer_buildings' => 'interventions#customer_buildings'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   #Route for Homepage
 

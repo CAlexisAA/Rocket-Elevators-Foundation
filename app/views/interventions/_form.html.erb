@@ -1,0 +1,58 @@
+<center>
+<%= form_with(model: intervention, local: true) do |f| %>
+
+  <div id="customer_select_div">
+    <%= f.label :customer_select, "Select Customer"%>
+    <%= f.select(:customer_select, [["--Select--",0]] + Customer.order(:fullName).map{|c| [c.fullName, c.id]}) %>
+  </div>
+  <br>
+  
+  <div id="building_select_div">
+    <h3>Building</h3>
+    <select id="building_select">
+    </select>
+  </div>
+  
+  <br>
+  
+  <div>
+  <%= f.label "Battery" %>
+  <select
+  id = "intervention_batterie_select">
+  </select>
+  </div>
+  
+  <br>
+  
+  <div>
+  <%= f.label "Column" %>
+  <select
+  id = "intervention_column_select">
+  </select>
+  </div>
+
+  <br>
+
+  <div>
+  <%= f.label "Elevator" %>
+  <select
+  id = "intervention_elevator_select">
+  </select>
+  </div>
+
+  <br><br>
+  
+  <%= f.label "Employee" %>
+  <%= f.collection_select :employee_select, Employee.order(:id), :title, :firstNname %>
+
+  <br>
+
+  <div class="field">
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<center>
+<% end %>

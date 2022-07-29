@@ -11,20 +11,20 @@
 // about supported directives.
 //
 
+//= require jquery3
+//= require jquery-ui
 //= require turbolinks
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require popper
 //= require bootstrap.min
-//= require jquery3
-//= require jquery-ui
 //= require owl.carousel
 //= require bootstrap
 //= require bootstrap-sprockets
 //= require bootstrap
 //= require owl.carousel
-//= require_tree .
 //= require google_maps_script
+//= require_tree .
 
 
